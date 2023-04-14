@@ -11,7 +11,7 @@ class Cat < ApplicationRecord
 
 
     def past_birth_date
-        if birth_date > Date.today
+        if self.birth_date > Date.today
             errors.add(:birth_date, "Birthday cannot be in the future")
         end
     end
